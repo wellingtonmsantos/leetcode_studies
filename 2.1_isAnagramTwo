@@ -1,0 +1,22 @@
+from collections import Counter
+
+class SolutionTwo:
+  def isAnagramTwo(self, s,t):
+    return Counter(s) == Counter(t)
+
+
+#testing 
+
+solution_two = SolutionTwo()
+
+
+
+
+#TESTING 
+
+s = "anagram"
+t = "nagaram"
+s2 = 'car'
+t2 = 'rat'
+resultTwo = solution_two.isAnagramTwo(s2,t2)
+resultTwo
