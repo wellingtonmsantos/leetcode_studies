@@ -1,0 +1,52 @@
+
+def findErrorNums(nums):
+    n = len(nums)
+    print(n)
+    duplicate = -1
+
+    for num in nums:
+      #MARK DUPLICATE NUMBERS
+ 
+
+        if nums[abs(num) - 1] < 0:
+
+          '''
+          It then checks whether the value at the index abs(num) - 1 is negative or not.
+          If it's negative, it means the number has been encountered before and is therefore a duplicate.
+          In that case, the absolute value of num is assigned to the duplicate variable.
+
+          '''
+
+          duplicate = abs(num)
+    
+        else:
+    
+
+            nums[abs(num) - 1] *= -1
+            print()          print(f'--Else clause: The negativa number: {nums[abs(num) - 1]}')
+     
+        
+            # It negates the value at the index abs(num) - 1 by multiplying it by -1.
+            # This is done to mark the number as visited.
+
+
+    missing = -1
+    #MARK MISSING NUMBERS
+    print(nums)
+    for i in range(n):
+        print(f'What is in the i value: {i}')
+        print(f'What is nums[i] before get into the if:  {nums[i]}')
+        if nums[i] > 0:
+
+
+            missing = i + 1
+            print(f'Missing value: {missing}')
+
+    print()
+
+	#To test the code
+nums = [1,2,2,4]
+print(findErrorNums(nums))
+ 
+    return [duplicate, missing]
+
