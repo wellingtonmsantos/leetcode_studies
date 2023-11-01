@@ -18,3 +18,16 @@ class Solution:
       if countS[c] != countT.get(c,0):
         return False
     return  True
+
+
+
+
+#TESTNG
+
+solution = Solution()
+
+s = "anagram"
+t = "nagaram"
+s2 = 'car'
+t2 = 'rat'
+result = solution.isAnagram(s2,t2)
