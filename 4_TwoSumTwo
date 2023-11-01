@@ -1,0 +1,15 @@
+@pysooper.snoop()
+
+class Solution(object):
+    def twoSum(self, numbers, target):
+        l, r = 0, len(numbers) - 1
+        #This is only a reference but it is not necessary to have len(numbers), since we need and outcome
+
+        while l < r: 
+            curSum = numbers[l] + numbers[r]
+            if curSum > target:
+                r -= 1 #Change the pointer in the RIGHT to the LEFT
+            elif curSum < target:
+                l  += 1 
+            else:
+                return [l + 1, r + 1]
