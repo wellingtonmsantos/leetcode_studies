@@ -1,0 +1,23 @@
+@pysnooper.snoop()
+
+class Solution(:
+  def TwoSum(self, nums, target):
+
+  prevMap = {} #val ->Index
+
+  for i, n in enumerate(nums):
+    diff = target - n 
+
+    if diff in prevMap:
+    return [prevMap[diff], i]
+  prevMap[n] =  i
+
+
+#TESTING
+
+running_TwoSumSolution = Solution()
+list_of_numbers = [1,2,3,4,5]
+target = 9
+
+two_sum_results = running_TwoSumSolution.twoSum(list_of_numbers, target)
+
