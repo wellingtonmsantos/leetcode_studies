@@ -1,0 +1,12 @@
+@pysnooper.snoop()
+
+class SolutionThree:
+  def isAnagramThree(self, s,t):
+    return sorted(s) == sorted(t)
+
+
+#testing
+
+solution_three = SolutionThree()
+resultThree = solution_three.isAnagramThree(s,t)
+resultThree
